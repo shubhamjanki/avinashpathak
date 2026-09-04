@@ -40,37 +40,47 @@
   --color-steel: var(--steel);
   --color-paper: var(--paper);
   --color-gold: var(--gold);
+  --color-saffron: var(--saffron);
+  --color-saffron-dark: var(--saffron-dark);
+  --color-saffron-light: var(--saffron-light);
+  --color-saffron-border: var(--saffron-border);
 }
 
 :root {
   --radius: 0.25rem;
 
-  /* Monochrome palette — black & white */
-  --navy: oklch(0.13 0 0);        /* near-black base */
-  --midnight: oklch(0.20 0 0);    /* raised surface */
-  --steel: oklch(0.62 0 0);       /* mid grey */
-  --paper: oklch(0.98 0 0);       /* white */
-  --gold: oklch(0.80 0 0);        /* light grey accent */
+  /* Saffron & Crisp White Palette */
+  --saffron: #FF7722;             /* Indian Saffron (bhagwa / kesariya) */
+  --saffron-dark: #E65A00;        /* Deep saffron for hover & active states */
+  --saffron-light: #FFF4EC;       /* Soft saffron wash */
+  --saffron-border: #FFD5B8;      /* Saffron border */
 
-  --background: var(--navy);
-  --foreground: var(--paper);
-  --card: var(--midnight);
-  --card-foreground: var(--paper);
-  --popover: var(--midnight);
-  --popover-foreground: var(--paper);
-  --primary: var(--paper);
-  --primary-foreground: var(--navy);
-  --secondary: oklch(0.26 0 0);
-  --secondary-foreground: var(--paper);
-  --muted: oklch(0.26 0 0);
-  --muted-foreground: oklch(0.72 0 0);
-  --accent: var(--gold);
-  --accent-foreground: var(--navy);
-  --destructive: oklch(0.55 0 0);
-  --destructive-foreground: var(--paper);
-  --border: oklch(0.62 0 0 / 0.28);
-  --input: oklch(0.62 0 0 / 0.34);
-  --ring: var(--steel);
+  /* Neutral white / off-white surfaces */
+  --navy: #FFFFFF;                /* primary background (crisp white) */
+  --midnight: #F9FAFB;            /* secondary card/tile background (soft off-white) */
+  --steel: #6B7280;               /* muted slate text */
+  --paper: #111827;               /* main dark text on white */
+  --gold: #FF7722;                /* accent highlights now vibrant saffron */
+
+  --background: #FFFFFF;
+  --foreground: #111827;
+  --card: #FFFFFF;
+  --card-foreground: #111827;
+  --popover: #FFFFFF;
+  --popover-foreground: #111827;
+  --primary: #FF7722;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F3F4F6;
+  --secondary-foreground: #111827;
+  --muted: #F3F4F6;
+  --muted-foreground: #4B5563;
+  --accent: #FF7722;
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E7EB;
+  --input: #D1D5DB;
+  --ring: #FF7722;
 }
 
 
@@ -112,6 +122,6 @@
 
 
 @utility paper-section {
-  background-color: var(--paper);
-  color: var(--navy);
+  background-color: #F9FAFB;
+  color: #111827;
 }

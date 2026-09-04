@@ -122,24 +122,28 @@ function Seal({ className = "" }: { className?: string }) {
 function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-40 border-b border-border/60 bg-navy/85 backdrop-blur-md">
-      <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-4 lg:grid-cols-[auto_1fr_auto]">
-        <Link to="/" className="flex min-w-0 items-center gap-3 text-paper">
-          <Seal className="h-10 w-10 shrink-0 text-sm tracking-[0.08em]" />
+    <header className="sticky top-0 z-40 border-b border-[#E65A00] bg-gradient-to-r from-[#FF7722] via-[#F97316] to-[#EA580C] text-white shadow-md">
+      <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-3.5 lg:grid-cols-[auto_1fr_auto]">
+        <Link to="/" className="flex min-w-0 items-center gap-3 text-white">
+          <span
+            aria-hidden
+            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border-2 border-white/80 bg-white/10 font-serif text-sm font-bold tracking-[0.08em] text-white shadow-sm"
+          >
+            AP
+          </span>
           <div className="min-w-0 leading-tight">
-            <div className="truncate font-serif text-base tracking-tight">Adv. Avinash Pathak</div>
-            <div className="truncate font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">Advocate & Author · Jhansi</div>
+            <div className="truncate font-serif text-base font-bold tracking-tight text-white">Adv. Avinash Pathak</div>
+            <div className="truncate font-mono text-[10px] uppercase tracking-[0.22em] text-white/90">Advocate &amp; Author · Supreme Court &amp; High Courts</div>
           </div>
         </Link>
-
 
         <nav className="hidden lg:flex items-center justify-center gap-8">
           {NAV.map(item => (
             <Link
               key={item.to}
               to={item.to}
-              className="font-sans text-[13px] tracking-wide text-paper/75 transition-colors hover:text-paper"
-              activeProps={{ className: "text-paper" }}
+              className="font-sans text-[13px] font-medium tracking-wide text-white/90 transition-colors hover:text-white"
+              activeProps={{ className: "text-white font-bold underline underline-offset-8 decoration-2" }}
             >
               {item.label}
             </Link>
@@ -149,32 +153,39 @@ function Header() {
         <div className="flex items-center gap-3">
           <Link
             to="/appointment"
-            className="hidden sm:inline-flex items-center border border-paper/40 px-4 py-2 text-xs uppercase tracking-[0.2em] text-paper transition-colors hover:bg-paper hover:text-navy"
+            className="hidden sm:inline-flex items-center rounded-full bg-white px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#EA580C] shadow-sm transition-all hover:bg-white/95 hover:shadow-md active:scale-95"
           >
             Book Consultation
           </Link>
           <button
             aria-label="Menu"
             onClick={() => setOpen(v => !v)}
-            className="lg:hidden inline-flex h-9 w-9 items-center justify-center border border-paper/30"
+            className="lg:hidden inline-flex h-9 w-9 items-center justify-center rounded border border-white/60 text-white"
           >
             <span className="sr-only">Menu</span>
             <div className="space-y-1">
-              <div className="h-px w-4 bg-paper" />
-              <div className="h-px w-4 bg-paper" />
-              <div className="h-px w-4 bg-paper" />
+              <div className="h-0.5 w-4 bg-white" />
+              <div className="h-0.5 w-4 bg-white" />
+              <div className="h-0.5 w-4 bg-white" />
             </div>
           </button>
         </div>
       </div>
       {open && (
-        <div className="lg:hidden border-t border-border/60 bg-navy px-6 py-4">
+        <div className="lg:hidden border-t border-white/20 bg-[#EA580C] px-6 py-4 shadow-inner">
           <div className="flex flex-col gap-3">
             {NAV.map(item => (
-              <Link key={item.to} to={item.to} onClick={() => setOpen(false)} className="text-sm text-paper/80 hover:text-paper">
+              <Link key={item.to} to={item.to} onClick={() => setOpen(false)} className="text-sm font-medium text-white hover:text-white/80">
                 {item.label}
               </Link>
             ))}
+            <Link
+              to="/appointment"
+              onClick={() => setOpen(false)}
+              className="mt-2 inline-flex items-center justify-center rounded bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#EA580C]"
+            >
+              Book Consultation
+            </Link>
           </div>
         </div>
       )}
@@ -184,40 +195,51 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="mt-24 border-t border-border/60 bg-navy">
+    <footer className="mt-24 border-t border-border bg-[#F9FAFB] text-gray-800">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <Seal className="h-12 w-12 text-base tracking-[0.08em]" />
-              <div className="font-serif text-lg">Avinash Pathak</div>
+              <span
+                aria-hidden
+                className="inline-flex h-12 w-12 items-center justify-center rounded-lg border-2 border-[#FF7722] bg-[#FFF4EC] font-serif text-base font-bold tracking-[0.08em] text-[#FF7722]"
+              >
+                AP
+              </span>
+              <div className="font-serif text-xl font-bold text-gray-900">Adv. Avinash Pathak</div>
             </div>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-gray-600">
               Chambers of Advocate Avinash Pathak. Counsel before the Supreme Court of India and High Courts. Advocate, author and civic campaigner.
             </p>
-            <p className="mt-6 font-devanagari text-lg text-paper/90">कार्यालय अविनाश पाठक — लेखक व अधिवक्ता</p>
+            <p className="mt-6 font-devanagari text-lg font-semibold text-[#E65A00]">कार्यालय अविनाश पाठक — लेखक व अधिवक्ता</p>
           </div>
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Chambers</div>
-            <ul className="mt-4 space-y-2 text-sm">
-              {NAV.map(n => <li key={n.to}><Link to={n.to} className="text-paper/80 hover:text-paper">{n.label}</Link></li>)}
+            <div className="font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-[#E65A00]">Chambers</div>
+            <ul className="mt-4 space-y-2.5 text-sm">
+              {NAV.map(n => (
+                <li key={n.to}>
+                  <Link to={n.to} className="text-gray-700 transition-colors hover:text-[#FF7722]">
+                    {n.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Reach &amp; Office</div>
-            <ul className="mt-4 space-y-2 text-sm text-paper/80">
-              <li>Office: <span className="text-paper">theUHOHhouse</span> (10am–4pm)</li>
-              <li>Jhansi, Bundelkhand</li>
-              <li><a href="tel:+919305770340" className="hover:text-gold">+91 93057 70340</a></li>
-              <li><a href="mailto:advocateavinashpathak@gmail.com" className="hover:text-gold break-words">advocateavinashpathak@gmail.com</a></li>
-              <li><a href="https://www.instagram.com/theUHOHhouse" target="_blank" rel="noreferrer" className="hover:text-gold">IG: @theUHOHhouse</a></li>
-              <li><a href="https://www.youtube.com/@avinashpathak52" target="_blank" rel="noreferrer" className="hover:text-gold">YT: @avinashpathak52</a></li>
+            <div className="font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-[#E65A00]">Reach &amp; Office</div>
+            <ul className="mt-4 space-y-2.5 text-sm text-gray-700">
+              <li>Office: <strong className="text-gray-900">theUHOHhouse</strong> (10am–4pm)</li>
+              <li>Jhansi, Bundelkhand, Uttar Pradesh</li>
+              <li><a href="tel:+919305770340" className="hover:text-[#FF7722] font-medium">+91 93057 70340</a></li>
+              <li><a href="mailto:advocateavinashpathak@gmail.com" className="hover:text-[#FF7722] break-words">advocateavinashpathak@gmail.com</a></li>
+              <li><a href="https://www.instagram.com/theUHOHhouse" target="_blank" rel="noreferrer" className="hover:text-[#FF7722]">IG: @theUHOHhouse</a></li>
+              <li><a href="https://www.youtube.com/@avinashpathak52" target="_blank" rel="noreferrer" className="hover:text-[#FF7722]">YT: @avinashpathak52</a></li>
             </ul>
           </div>
         </div>
-        <div className="mt-16 flex flex-col gap-4 border-t border-border/60 pt-6 md:flex-row md:items-center md:justify-between">
-          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">© {new Date().getFullYear()} Adv. Avinash Pathak · All rights reserved</p>
-          <p className="font-mono text-[11px] text-muted-foreground">Advocates & Solicitors · Bar Council of India</p>
+        <div className="mt-16 flex flex-col gap-4 border-t border-gray-200 pt-6 md:flex-row md:items-center md:justify-between text-xs text-gray-500 font-mono">
+          <p>© {new Date().getFullYear()} Adv. Avinash Pathak · All rights reserved</p>
+          <p>Advocates &amp; Solicitors · Bar Council of India · Supreme Court &amp; High Courts</p>
         </div>
       </div>
     </footer>

@@ -277,49 +277,49 @@ function SocialIcon({ name }: { name: string }) {
 function Index() {
   return (
     <>
-      {/* CREDENTIALS & MISSION BANNER */}
-      <div className="border-b border-border bg-gradient-to-r from-midnight via-navy to-midnight py-3 px-6 text-center text-xs">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-4 gap-y-1.5 font-mono text-[11px] text-paper/85">
-          <span className="text-gold font-semibold tracking-wider">Adv. Avinash Pathak</span>
-          <span className="text-steel">·</span>
+      {/* CREDENTIALS & MISSION BANNER — SAFFRON */}
+      <div className="border-b border-[#E65A00] bg-gradient-to-r from-[#FF7722] via-[#F97316] to-[#EA580C] py-2.5 px-6 text-center text-xs text-white shadow-sm">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-4 gap-y-1 font-mono text-[11px] font-medium tracking-wide">
+          <span className="font-bold underline decoration-white/60 underline-offset-2">Adv. Avinash Pathak</span>
+          <span className="text-white/60">·</span>
           <span>Global Environment Activist</span>
-          <span className="text-steel">·</span>
+          <span className="text-white/60">·</span>
           <span>Top Writer &amp; Lawyer of Great Bharat</span>
-          <span className="text-steel">·</span>
+          <span className="text-white/60">·</span>
           <span>Founder, United Human Organization</span>
-          <span className="text-steel">·</span>
+          <span className="text-white/60">·</span>
           <span>Head, Saturday for Society Global Movement</span>
-          <span className="text-steel">·</span>
-          <span className="text-gold">The Great Aryan Dream 🇮🇳 🌳 📈</span>
+          <span className="text-white/60">·</span>
+          <span className="font-semibold text-white">The Great Aryan Dream 🇮🇳 🌳 📈</span>
         </div>
       </div>
 
 
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden bg-white">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 pb-20 pt-14 lg:grid-cols-12 lg:gap-8 lg:pt-24">
           <div className="lg:col-span-7 flex flex-col justify-center">
-            <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-gold">
-              Advocate · Supreme Court & High Courts
+            <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.35em] text-[#FF7722]">
+              Advocate · Supreme Court &amp; High Courts
             </p>
-            <h1 className="mt-6 font-serif text-[clamp(2.5rem,6vw,5rem)] leading-[1.02] tracking-tight text-paper">
+            <h1 className="mt-6 font-serif text-[clamp(2.5rem,6vw,5rem)] leading-[1.02] tracking-tight text-gray-900">
               Counsel with conviction.<br />
-              <em className="text-gold/90">Advocacy</em> with conscience.
+              <em className="text-[#FF7722] not-italic font-medium">Advocacy</em> with conscience.
             </h1>
-            <p className="mt-8 max-w-xl text-base leading-relaxed text-paper/75">
-              Chambers of <span className="text-paper">Adv. Avinash Pathak</span> — eight years at the bar, thirteen years at the writing desk. Based in Jhansi; appearing before the Supreme Court and High Courts. <span className="text-paper">Online consultations available worldwide.</span>
+            <p className="mt-8 max-w-xl text-base leading-relaxed text-gray-700">
+              Chambers of <span className="font-semibold text-gray-900">Adv. Avinash Pathak</span> — eight years at the bar, thirteen years at the writing desk. Based in Jhansi; appearing before the Supreme Court and High Courts. <span className="text-gray-900 font-medium">Online consultations available worldwide.</span>
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
                 to="/appointment"
-                className="group inline-flex items-center gap-3 bg-paper px-6 py-3 text-sm font-medium text-navy transition-colors hover:bg-gold"
+                className="group inline-flex items-center gap-3 rounded bg-[#FF7722] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#E65A00] hover:shadow-md"
               >
                 Book a consultation
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </Link>
               <Link
                 to="/practice"
-                className="inline-flex items-center gap-2 border-b border-paper/40 pb-1 text-sm text-paper/80 transition-colors hover:border-paper hover:text-paper"
+                className="inline-flex items-center gap-2 border-b-2 border-gray-900 pb-1 text-sm font-medium text-gray-900 transition-colors hover:border-[#FF7722] hover:text-[#FF7722]"
               >
                 View the practice
               </Link>
