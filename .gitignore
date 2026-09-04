@@ -4,6 +4,7 @@
 !.env.example
 
 # Platform-specific (not for version control)
+.vercel/
 .lovable/
 .replit
 
