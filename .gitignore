@@ -3,6 +3,10 @@
 .env.*
 !.env.example
 
+# Platform-specific (not for version control)
+.lovable/
+.replit
+
 # Logs
 logs
 *.log
