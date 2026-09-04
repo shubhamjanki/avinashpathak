@@ -1,0 +1,117 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+
+  --font-serif: "Libre Baskerville", ui-serif, Georgia, serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-devanagari: "Noto Serif Devanagari", "Libre Baskerville", serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-navy: var(--navy);
+  --color-midnight: var(--midnight);
+  --color-steel: var(--steel);
+  --color-paper: var(--paper);
+  --color-gold: var(--gold);
+}
+
+:root {
+  --radius: 0.25rem;
+
+  /* Monochrome palette — black & white */
+  --navy: oklch(0.13 0 0);        /* near-black base */
+  --midnight: oklch(0.20 0 0);    /* raised surface */
+  --steel: oklch(0.62 0 0);       /* mid grey */
+  --paper: oklch(0.98 0 0);       /* white */
+  --gold: oklch(0.80 0 0);        /* light grey accent */
+
+  --background: var(--navy);
+  --foreground: var(--paper);
+  --card: var(--midnight);
+  --card-foreground: var(--paper);
+  --popover: var(--midnight);
+  --popover-foreground: var(--paper);
+  --primary: var(--paper);
+  --primary-foreground: var(--navy);
+  --secondary: oklch(0.26 0 0);
+  --secondary-foreground: var(--paper);
+  --muted: oklch(0.26 0 0);
+  --muted-foreground: oklch(0.72 0 0);
+  --accent: var(--gold);
+  --accent-foreground: var(--navy);
+  --destructive: oklch(0.55 0 0);
+  --destructive-foreground: var(--paper);
+  --border: oklch(0.62 0 0 / 0.28);
+  --input: oklch(0.62 0 0 / 0.34);
+  --ring: var(--steel);
+}
+
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv01";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: var(--gold);
+    color: var(--navy);
+  }
+}
+
+@utility font-serif { font-family: var(--font-serif); }
+@utility font-devanagari { font-family: var(--font-devanagari); }
+@utility hairline {
+  border-top: 1px solid oklch(0.62 0 0 / 0.3);
+}
+
+
+@utility paper-section {
+  background-color: var(--paper);
+  color: var(--navy);
+}
