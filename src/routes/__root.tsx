@@ -204,12 +204,14 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Reach</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Reach &amp; Office</div>
             <ul className="mt-4 space-y-2 text-sm text-paper/80">
+              <li>Office: <span className="text-paper">theUHOHhouse</span> (10am–4pm)</li>
               <li>Jhansi, Bundelkhand</li>
-              <li><a href="tel:+919305770340" className="hover:text-paper">+91 93057 70340</a></li>
-              <li><a href="mailto:advocateavinashpathak@gmail.com" className="hover:text-paper break-words">advocateavinashpathak@gmail.com</a></li>
-              <li><a href="https://twitter.com/theUHOHouse" target="_blank" rel="noreferrer" className="hover:text-paper">@theUHOHouse</a></li>
+              <li><a href="tel:+919305770340" className="hover:text-gold">+91 93057 70340</a></li>
+              <li><a href="mailto:advocateavinashpathak@gmail.com" className="hover:text-gold break-words">advocateavinashpathak@gmail.com</a></li>
+              <li><a href="https://www.instagram.com/theUHOHhouse" target="_blank" rel="noreferrer" className="hover:text-gold">IG: @theUHOHhouse</a></li>
+              <li><a href="https://www.youtube.com/@avinashpathak52" target="_blank" rel="noreferrer" className="hover:text-gold">YT: @avinashpathak52</a></li>
             </ul>
           </div>
         </div>

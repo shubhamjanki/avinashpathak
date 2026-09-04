@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Facebook, Twitter, Instagram, ChevronRight } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube, ChevronRight } from "lucide-react";
 
 export function FloatingSocials() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,18 +10,19 @@ export function FloatingSocials() {
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
-      <div className="relative flex flex-col gap-4 rounded-r-2xl border border-l-0 border-border/40 bg-white p-3 py-5 shadow-[4px_0_24px_rgba(0,0,0,0.08)]">
+      <div className="relative flex flex-col gap-3 rounded-r-2xl border border-l-0 border-border/40 bg-white/95 backdrop-blur-md p-2.5 py-4 shadow-[4px_0_24px_rgba(0,0,0,0.12)]">
+        {/* WhatsApp */}
         <a
           href="https://wa.me/919305770340"
           target="_blank"
           rel="noreferrer"
-          aria-label="WhatsApp"
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-sm transition-transform hover:scale-110"
+          aria-label="WhatsApp (+91 93057 70340)"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] text-white shadow-sm transition-transform hover:scale-115 hover:shadow-md"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"
-            className="h-6 w-6"
+            className="h-5 w-5"
             aria-hidden
             fill="none"
           >
@@ -36,34 +37,89 @@ export function FloatingSocials() {
           </svg>
         </a>
 
+        {/* YouTube Main Channel */}
         <a
-          href="#"
+          href="https://www.youtube.com/@avinashpathak52"
           target="_blank"
           rel="noreferrer"
-          aria-label="Facebook"
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1877F2] text-white shadow-sm transition-transform hover:scale-110"
+          aria-label="YouTube Channel (@avinashpathak52)"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-[#FF0000] text-white shadow-sm transition-transform hover:scale-115 hover:shadow-md"
         >
-          <Facebook className="h-6 w-6" strokeWidth={2} fill="currentColor" />
+          <Youtube className="h-5 w-5" strokeWidth={2.2} />
         </a>
 
+        {/* YouTube Vlogs */}
         <a
-          href="#"
+          href="https://www.youtube.com/@avinashpathakvlogs"
           target="_blank"
           rel="noreferrer"
-          aria-label="Twitter"
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-[#14171A] text-white shadow-sm transition-transform hover:scale-110"
+          aria-label="YouTube Vlogs (@avinashpathakvlogs)"
+          className="group relative flex h-11 w-11 items-center justify-center rounded-full bg-[#CC0000] text-white shadow-sm transition-transform hover:scale-115 hover:shadow-md"
         >
-          <Twitter className="h-6 w-6" strokeWidth={2} fill="currentColor" />
+          <Youtube className="h-5 w-5" strokeWidth={2.2} />
+          <span className="absolute -bottom-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-navy text-[8px] font-bold text-gold ring-1 ring-white">
+            V
+          </span>
         </a>
 
+        {/* Facebook */}
         <a
-          href="#"
+          href="https://www.facebook.com/sirAvinashPathak"
           target="_blank"
           rel="noreferrer"
-          aria-label="Instagram"
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white shadow-sm transition-transform hover:scale-110"
+          aria-label="Facebook (@sirAvinashPathak)"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-[#1877F2] text-white shadow-sm transition-transform hover:scale-115 hover:shadow-md"
         >
-          <Instagram className="h-6 w-6" strokeWidth={2} />
+          <Facebook className="h-5 w-5" strokeWidth={2} fill="currentColor" />
+        </a>
+
+        {/* Instagram Avinash Pathak */}
+        <a
+          href="https://www.instagram.com/avinashpathak52"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Instagram (@avinashpathak52)"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white shadow-sm transition-transform hover:scale-115 hover:shadow-md"
+        >
+          <Instagram className="h-5 w-5" strokeWidth={2} />
+        </a>
+
+        {/* Instagram theUHOHhouse */}
+        <a
+          href="https://www.instagram.com/theUHOHhouse"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Instagram Office (@theUHOHhouse)"
+          className="group relative flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-tr from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white shadow-sm transition-transform hover:scale-115 hover:shadow-md"
+        >
+          <Instagram className="h-5 w-5" strokeWidth={2} />
+          <span className="absolute -bottom-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-navy text-[8px] font-bold text-gold ring-1 ring-white">
+            O
+          </span>
+        </a>
+
+        {/* X / Twitter */}
+        <a
+          href="https://www.twitter.com/avinashpathak52"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="X / Twitter (@avinashpathak52)"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-black text-white shadow-sm transition-transform hover:scale-115 hover:shadow-md"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+        </a>
+
+        {/* LinkedIn */}
+        <a
+          href="https://www.linkedin.com/in/avinashpathak52"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="LinkedIn (avinashpathak52)"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0A66C2] text-white shadow-sm transition-transform hover:scale-115 hover:shadow-md"
+        >
+          <Linkedin className="h-5 w-5" strokeWidth={2} fill="currentColor" />
         </a>
       </div>
 

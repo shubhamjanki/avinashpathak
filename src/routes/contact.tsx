@@ -72,7 +72,7 @@ Chambers of<br />
                 <div className="mt-1 text-xs text-muted-foreground">Bail matters 15:00 – 16:00 · Saturdays reserved for community</div>
               </div>
               <div>
-                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">Direct line</div>
+                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">Direct line / WhatsApp</div>
                 <a href="tel:+919305770340" className="mt-2 block font-serif text-lg text-paper hover:text-gold">+91 93057 70340</a>
               </div>
               <div>
@@ -80,11 +80,16 @@ Chambers of<br />
                 <a href="mailto:advocateavinashpathak@gmail.com" className="mt-2 block text-paper hover:text-gold break-words">advocateavinashpathak@gmail.com</a>
               </div>
               <div>
-                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">On the record</div>
-                <div className="mt-2 flex flex-wrap gap-4 text-sm">
-                  <a href="https://twitter.com/theUHOHouse" target="_blank" rel="noreferrer" className="text-paper hover:text-gold">X · @theUHOHouse</a>
-                  <a href="https://instagram.com/theuhohouse" target="_blank" rel="noreferrer" className="text-paper hover:text-gold">Instagram · @theuhohouse</a>
-                  <a href="https://advocateavinashpathak.blogspot.com" target="_blank" rel="noreferrer" className="text-paper hover:text-gold">Blog</a>
+                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">Official Channels &amp; Social Media</div>
+                <div className="mt-3 grid grid-cols-2 gap-2.5 text-xs">
+                  <a href="https://www.youtube.com/@avinashpathak52" target="_blank" rel="noreferrer" className="text-paper/80 hover:text-gold">YouTube · @avinashpathak52</a>
+                  <a href="https://www.youtube.com/@avinashpathakvlogs" target="_blank" rel="noreferrer" className="text-paper/80 hover:text-gold">YouTube Vlogs · @avinashpathakvlogs</a>
+                  <a href="https://www.instagram.com/avinashpathak52" target="_blank" rel="noreferrer" className="text-paper/80 hover:text-gold">Instagram · @avinashpathak52</a>
+                  <a href="https://www.instagram.com/theUHOHhouse" target="_blank" rel="noreferrer" className="text-paper/80 hover:text-gold">Office IG · @theUHOHhouse</a>
+                  <a href="https://www.facebook.com/sirAvinashPathak" target="_blank" rel="noreferrer" className="text-paper/80 hover:text-gold">Facebook · @sirAvinashPathak</a>
+                  <a href="https://www.twitter.com/avinashpathak52" target="_blank" rel="noreferrer" className="text-paper/80 hover:text-gold">X / Twitter · @avinashpathak52</a>
+                  <a href="https://www.linkedin.com/in/avinashpathak52" target="_blank" rel="noreferrer" className="text-paper/80 hover:text-gold">LinkedIn · avinashpathak52</a>
+                  <a href="https://advocateavinashpathak.blogspot.com" target="_blank" rel="noreferrer" className="text-paper/80 hover:text-gold">Blogspot · Notes &amp; Essays</a>
                 </div>
               </div>
             </div>
