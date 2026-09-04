@@ -125,18 +125,20 @@ function About() {
 
 
       {/* WRITING */}
-      <section className="paper-section">
+      <section className="border-y border-border bg-[#F9FAFB]">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 md:grid-cols-12">
           <div className="md:col-span-6">
-            <img src={library} alt="The library" width={1600} height={1000} loading="lazy" className="w-full" />
+            <div className="overflow-hidden rounded-lg border border-gray-200 shadow-sm">
+              <img src={library} alt="The library" width={1600} height={1000} loading="lazy" className="w-full object-cover" />
+            </div>
           </div>
           <div className="md:col-span-6 flex flex-col justify-center">
-            <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-steel">The Writer</p>
-            <h2 className="mt-3 font-serif text-4xl text-navy">Nineteen books, and still counting.</h2>
-            <p className="mt-6 text-base leading-relaxed text-navy/80">
+            <p className="font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-[#FF7722]">The Writer</p>
+            <h2 className="mt-3 font-serif text-4xl font-normal text-gray-900">Nineteen books, and still counting.</h2>
+            <p className="mt-6 text-base leading-relaxed text-gray-700">
               Avinash's writing runs parallel to his practice — essays, monographs, and public philosophy on ecology, rights, and the future of the Indian civic imagination. The most read among them are the works around <em>The Great Aryan Dream</em> and <em>World Peace Treaty</em>.
             </p>
-            <Link to="/books" className="mt-8 inline-flex items-center gap-2 border-b border-navy/40 pb-1 text-sm text-navy hover:border-navy w-fit">
+            <Link to="/books" className="mt-8 inline-flex items-center gap-2 border-b-2 border-gray-900 pb-1 text-sm font-medium text-gray-900 transition-colors hover:border-[#FF7722] hover:text-[#FF7722] w-fit">
               Browse the writings →
             </Link>
           </div>

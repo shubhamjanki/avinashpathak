@@ -492,22 +492,24 @@ function Index() {
 
 
       {/* PHILOSOPHY / PULL QUOTE */}
-      <section className="paper-section">
+      <section className="border-y border-border bg-[#F9FAFB]">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 md:grid-cols-12">
           <div className="md:col-span-5">
-            <img src={portraitSecond} alt="Advocate Avinash Pathak outside the court" width={1280} height={1920} loading="lazy" className="w-full object-cover" />
+            <div className="relative overflow-hidden rounded-lg shadow-md border border-gray-200">
+              <img src={portraitSecond} alt="Advocate Avinash Pathak outside the court" width={1280} height={1920} loading="lazy" className="w-full object-cover" />
+            </div>
           </div>
           <div className="md:col-span-7 flex flex-col justify-center">
-            <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-steel">The Chambers</p>
-            <blockquote className="mt-6 font-serif text-3xl leading-[1.25] md:text-4xl text-navy">
+            <p className="font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-[#FF7722]">The Chambers</p>
+            <blockquote className="mt-6 font-serif text-3xl leading-[1.3] md:text-4xl font-normal text-gray-900">
               "Law is not a profession I chose to earn from. It is an instrument — used well, it protects the smallest voice; used badly, it silences the loudest. My chambers exist for the former."
             </blockquote>
-            <div className="mt-8 font-mono text-xs uppercase tracking-[0.2em] text-midnight">— Avinash Pathak</div>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Link to="/about" className="inline-flex items-center gap-3 bg-navy px-6 py-3 text-sm text-paper hover:bg-midnight">
+            <div className="mt-8 font-mono text-sm font-semibold uppercase tracking-[0.2em] text-[#E65A00]">— Adv. Avinash Pathak</div>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <Link to="/about" className="inline-flex items-center gap-3 rounded bg-[#FF7722] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#E65A00] hover:shadow-md">
                 Read the biography →
               </Link>
-              <Link to="/books" className="inline-flex items-center gap-2 border-b border-navy/40 pb-1 text-sm text-navy hover:border-navy">
+              <Link to="/books" className="inline-flex items-center gap-2 border-b-2 border-gray-900 pb-1 text-sm font-medium text-gray-900 transition-colors hover:border-[#FF7722] hover:text-[#FF7722]">
                 Explore the writings
               </Link>
             </div>
@@ -619,33 +621,35 @@ function Index() {
       </section>
 
       {/* SOCIAL MEDIA */}
-      <section className="paper-section border-y border-border">
+      <section className="border-y border-border bg-[#F9FAFB]">
         <div className="mx-auto max-w-7xl px-6 py-24">
           <FadeIn>
-            <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-steel">Connect</p>
-            <h2 className="mt-3 font-serif text-4xl md:text-5xl text-navy">Follow the work.</h2>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-midnight/80">
+            <p className="font-mono text-[11px] font-bold uppercase tracking-[0.35em] text-[#FF7722]">Connect</p>
+            <h2 className="mt-3 font-serif text-4xl md:text-5xl text-gray-900 font-normal">Follow the work.</h2>
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-gray-600">
               Join the conversation across platforms — daily notes from court, essays on justice, and the movements growing out of Bundelkhand.
             </p>
           </FadeIn>
 
-          <div className="mt-12 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {SOCIALS.map((s, i) => (
-              <FadeIn key={s.name} delay={i * 80} className="group bg-paper transition-colors hover:bg-navy/[0.03]">
+              <FadeIn key={s.name} delay={i * 80} className="group rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-[#FF7722]">
                 <a
                   href={s.url}
                   target="_blank"
                   rel="noreferrer"
                   aria-label={`Visit ${s.name} profile`}
-                  className="block h-full p-8"
+                  className="flex flex-col justify-between h-full p-6"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center border border-navy/20 text-navy transition-colors group-hover:border-gold group-hover:text-gold">
-                    <SocialIcon name={s.name} />
+                  <div>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#FFF4EC] border border-[#FFD5B8] text-navy transition-transform duration-200 group-hover:scale-110">
+                      <SocialIcon name={s.name} />
+                    </div>
+                    <h3 className="mt-5 font-serif text-xl font-bold text-gray-900 group-hover:text-[#FF7722] transition-colors">{s.name}</h3>
+                    <p className="mt-1 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-[#E65A00]">{s.handle}</p>
+                    <p className="mt-3 text-sm leading-relaxed text-gray-600">{s.desc}</p>
                   </div>
-                  <h3 className="mt-6 font-serif text-2xl text-navy">{s.name}</h3>
-                  <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.2em] text-steel">{s.handle}</p>
-                  <p className="mt-4 text-sm leading-relaxed text-midnight/80">{s.desc}</p>
-                  <span className="mt-6 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-navy/60 transition-colors group-hover:text-gold">
+                  <span className="mt-6 inline-flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-700 transition-colors group-hover:text-[#FF7722]">
                     Visit profile →
                   </span>
                 </a>
